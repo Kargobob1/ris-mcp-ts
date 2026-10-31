@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: ris-mcp
+    runtime: docker
+    plan: free
+    region: frankfurt
+    healthCheckPath: /health
+    autoDeploy: false
+    envVars:
+      - key: NODE_ENV
+        value: production
